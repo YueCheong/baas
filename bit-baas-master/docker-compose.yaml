@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  
+  tool:
+    container_name: tool
+    network_mode: bridge
+    image: hyperledger/fabric-tools:1.4
+    tty: true
+    stdin_open: true
+    environment:
+      - GOPATH=/opt/gopath
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - FABRIC_CFG_PATH=/tmp
+    volumes:
+      - .:/tmp
+      # - /var/run/docker.sock:/var/run/docker.sock
+      # - /usr/local/bin/docker:/usr/bin/docker
+    working_dir: /tmp

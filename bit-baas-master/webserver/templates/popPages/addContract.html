@@ -1,0 +1,73 @@
+{{define "empty"}}
+
+    <head>
+        <meta charset="UTF-8">
+        <title>上传合约 </title>
+        <link rel="stylesheet" href="../../../static/layui/css/layui.css"  media="all">
+        <script type="text/javascript" src="../../../static/layui/layui.js"></script>
+<!--        <script type="text/javascript" src="../../../static/js/notebook_add.js"></script>-->
+    </head>
+    <style>
+        body{margin: 10px;}
+        .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
+    </style>
+    <body>
+    <div>
+        <form class="layui-form" action="" lay-filter="add-contract">
+            <div class="layui-form-item">
+                <label class="layui-form-label">ContractName</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="contract-name" lay-verify="pass" placeholder="示例：contract1" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">ContractDesc</label>
+                <div class="layui-input-block">
+                    <textarea name="contract-desc" placeholder='示例：this is a contract.' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">Version</label>
+                <div class="layui-input-block">
+                    <textarea name="contract-version" placeholder='示例：1.0.0' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">CCLanguage</label>
+                <div class="layui-input-inline">
+                    <select name="CCLanguage">
+                        <option value=""></option>
+                        <option value=0>Go</option>
+                        <option value=1>Java</option>
+                        <option value=2>node</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">区块链系统</label>
+                <div class="layui-input-inline">
+                    <select name="network-name" id="network-name" lay-filter="network-name">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">通道</label>
+                <div class="layui-input-inline">
+                    <select name="channel-name" id="channel-name">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="layui-btn" id="upload-button"><i class="layui-icon"></i>上传文件</button>
+            </div>
+        </form>
+        <div style="text-align: center;">
+            <button id="add-contract-sure-btn" type="button" class="layui-btn layui-btn-normal" style="margin-left:0px;margin-top:20px" >确定</button>
+            <button id="add-contract-cancel-btn" type="button" class="layui-btn layui-btn-normal" style="margin-left:20px;margin-top:20px" >取消</button>
+        </div>
+    </div>
+    <script src="../../static/js/popjs/addContract.js?v=$version"></script>
+    </body>
+{{end}}

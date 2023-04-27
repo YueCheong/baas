@@ -1,0 +1,43 @@
+{{define "content"}}
+<div style="padding: 15px;">
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-form" lay-filter="contract-display">
+                        <div class="layui-btn-group demoTable">
+                            <button class="layui-btn" data-type="addContract">上传合约</button>
+                        </div>
+                        <div class="layui-form-item"  style="text-align: center;">
+                            <label class="layui-form-label">Blockchain</label>
+                            <div class="layui-input-inline">
+                                <select name="blockchain-name" id="blockchain-name" lay-filter="blockchain-name">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item"  style="text-align: center;">
+                            <label class="layui-form-label">Channel</label>
+                            <div class="layui-input-inline">
+                                <select name="channel-name" id="channel-name" lay-filter="channel-name">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <table class="layui-hide" id="contract-table-toolbar" lay-filter="contract-table-toolbar"></table>
+                        <script type="text/html" id="contract-table-toolbar-barDemo">
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="instantiate">instantiate</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="invoke">invoke</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="log">log</a>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
+
+{{define "javascript"}}
+<script src="../../static/js/ChaincodeControl.js"></script>
+{{end}}

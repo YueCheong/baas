@@ -1,0 +1,38 @@
+{{define "content"}}
+    <div style="padding: 15px;">内容主体区域</div>
+
+    <div class="layui-form" lay-filter="index-display">
+        <div class="layui-form-item">
+            <label class="layui-form-label">网络数</label>
+            <div class="layui-input-inline">
+                <input type="text" name="network-num" id="network-num" lay-verify="pass" disabled="true" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">通道数</label>
+            <div class="layui-input-inline">
+                <input type="text" name="channel-num" id="channel-num" lay-verify="pass" disabled="true" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">链码数</label>
+            <div class="layui-input-inline">
+                <input type="text" name="chaincode-num" id="chaincode-num" lay-verify="pass" disabled="true" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">系统数</label>
+            <div class="layui-input-inline">
+                <input type="text" name="blockchain-num" id="blockchain-num" lay-verify="pass" disabled="true" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+{{end}}
+
+{{define "javascript"}}
+    <script src="../../static/js/index.js"></script>
+{{end}}

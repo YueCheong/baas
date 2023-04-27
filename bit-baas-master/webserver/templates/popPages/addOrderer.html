@@ -1,0 +1,54 @@
+{{define "empty"}}
+
+<head>
+    <meta charset="UTF-8">
+    <title>增加Orderer配置 </title>
+    <link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+    <script type="text/javascript" src="../../../static/layui/layui.js"></script>
+    <!--        <script type="text/javascript" src="../../../static/js/notebook_add.js"></script>-->
+</head>
+<style>
+    body {
+        margin: 10px;
+    }
+
+    .demo-carousel {
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+</style>
+<body>
+<div>
+    <form class="layui-form" action="" lay-filter="add-orderer">
+        <div class="layui-form-item">
+            <label class="layui-form-label">Operation</label>
+            <div class="layui-input-inline">
+                <select name="Operation">
+                    <option value=""></option>
+                    <option value=4>添加Orderer组织</option>
+                    <option value=5>添加orderer节点</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">Content</label>
+            <div class="layui-input-block">
+                <textarea name="orderer-config"
+                          placeholder='{"BlockchainID":1,"Operation":4,"Name":"Orderer","Domain":"example.com","MSPID":"OrdererMSP"}'
+                          class="layui-textarea"></textarea>
+            </div>
+        </div>
+    </form>
+    <div style="text-align: center;">
+        <button id="add-orderer-sure-btn" type="button" class="layui-btn layui-btn-normal"
+                style="margin-left:0px;margin-top:20px">确定
+        </button>
+        <button id="add-orderer-cancel-btn" type="button" class="layui-btn layui-btn-normal"
+                style="margin-left:20px;margin-top:20px">取消
+        </button>
+    </div>
+</div>
+<script src="../../static/js/popjs/addOrderer.js?v=$version"></script>
+</body>
+{{end}}

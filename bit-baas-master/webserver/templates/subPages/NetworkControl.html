@@ -1,0 +1,25 @@
+{{define "content"}}
+<div style="padding: 15px;">
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-body">
+                        <div class="layui-btn-group demoTable">
+                            <button class="layui-btn" data-type="addNetwork">添加网络</button>
+                        </div>
+                        <table class="layui-hide" id="network-table-toolbar" lay-filter="network-table-toolbar"></table>
+                        <script type="text/html" id="network-table-toolbar-barDemo">
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
+
+{{define "javascript"}}
+<script src="../../static/js/NetworkControl.js?v=$version"></script>
+{{end}}

@@ -1,0 +1,33 @@
+{{define "empty"}}
+
+    <head>
+        <meta charset="UTF-8">
+        <title>添加网络</title>
+        <link rel="stylesheet" href="../../../static/layui/css/layui.css"  media="all">
+        <script type="text/javascript" src="../../../static/layui/layui.js"></script>
+<!--        <script type="text/javascript" src="../../../static/js/notebook_add.js"></script>-->
+    </head>
+    <style>
+        body{margin: 10px;}
+        .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
+    </style>
+    <body>
+    <div>
+        <form class="layui-form" action="" lay-filter="add-network">
+            <div class="layui-form-item">
+                <label class="layui-form-label">Name</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="Name" lay-verify="pass" placeholder="示例：network1" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </form>
+        <div style="text-align: center;">
+            <button id="add-network-sure-btn" type="button" class="layui-btn layui-btn-normal" style="margin-left:0px;margin-top:20px" >确定</button>
+            <button id="add-network-cancel-btn" type="button" class="layui-btn layui-btn-normal" style="margin-left:20px;margin-top:20px" >取消</button>
+        </div>
+    </div>
+    <script src="../../static/js/popjs/addNetwork.js?v=$version"></script>
+
+
+    </body>
+{{end}}

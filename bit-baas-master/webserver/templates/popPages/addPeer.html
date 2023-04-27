@@ -1,0 +1,54 @@
+{{define "empty"}}
+
+<head>
+    <meta charset="UTF-8">
+    <title>增加Peer配置 </title>
+    <link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+    <script type="text/javascript" src="../../../static/layui/layui.js"></script>
+    <!--        <script type="text/javascript" src="../../../static/js/notebook_add.js"></script>-->
+</head>
+<style>
+    body {
+        margin: 10px;
+    }
+
+    .demo-carousel {
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+</style>
+<body>
+<div>
+    <form class="layui-form" action="" lay-filter="add-peer">
+        <div class="layui-form-item">
+            <label class="layui-form-label">Operation</label>
+            <div class="layui-input-inline">
+                <select name="Operation">
+                    <option value=""></option>
+                    <option value=6>添加Peer组织</option>
+                    <option value=7>添加Peer节点</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">Content</label>
+            <div class="layui-input-block">
+                <textarea name="peer-config"
+                          placeholder='{"BlockchainID":1,"Operation":6,"Name":"org1","Domain": "example.com","MSPID":"Org1MSP"}'
+                          class="layui-textarea"></textarea>
+            </div>
+        </div>
+    </form>
+    <div style="text-align: center;">
+        <button id="add-peer-sure-btn" type="button" class="layui-btn layui-btn-normal"
+                style="margin-left:0px;margin-top:20px">确定
+        </button>
+        <button id="add-peer-cancel-btn" type="button" class="layui-btn layui-btn-normal"
+                style="margin-left:20px;margin-top:20px">取消
+        </button>
+    </div>
+</div>
+<script src="../../static/js/popjs/addPeer.js?v=$version"></script>
+</body>
+{{end}}

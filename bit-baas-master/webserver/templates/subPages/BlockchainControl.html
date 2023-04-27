@@ -1,0 +1,30 @@
+{{define "content"}}
+<div style="padding: 15px;">
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-body">
+                        <div class="layui-btn-group demoTable">
+                            <button class="layui-btn" data-type="addBlockchain">添加系统</button>
+                        </div>
+                        <table class="layui-hide" id="blockchain-table-toolbar" lay-filter="blockchain-table-toolbar"></table>
+                        <script type="text/html" id="blockchain-table-toolbar-barDemo">
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="addOrderer">增加order</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="addPeer">增加peer</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="init">初始化</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="start">启动</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="stop">停止</a>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
+
+{{define "javascript"}}
+<script src="../../static/js/BlockchainControl.js?v=$version"></script>
+{{end}}

@@ -1,0 +1,31 @@
+{{define "empty"}}
+
+<head>
+    <meta charset="UTF-8">
+    <title>合约日志</title>
+    <link rel="stylesheet" href="../../../static/layui/css/layui.css"  media="all">
+    <script type="text/javascript" src="../../../static/layui/layui.js"></script>
+    <!--        <script type="text/javascript" src="../../../static/js/notebook_add.js"></script>-->
+</head>
+<style>
+    body{margin: 10px;}
+    .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
+</style>
+<body>
+    <div style="padding: 15px;">
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body">
+                            <table class="layui-hide" id="contract-log-table-toolbar" lay-filter="contract-log-table-toolbar"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../static/js/popjs/contractLog.js?v=$version"></script>
+
+</body>
+{{end}}
